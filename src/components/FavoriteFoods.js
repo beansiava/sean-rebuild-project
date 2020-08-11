@@ -32,7 +32,7 @@ const FavoriteFoods = () => {
             <div style={styles.selectContainer}>
                 <FavoriteSelectShell onClick={() => yelpSearchApi('dragonfly')}>sushi</FavoriteSelectShell>
                 <FavoriteSelectShell onClick={() => yelpSearchApi('leonardos')}>pizza</FavoriteSelectShell>
-                <FavoriteSelectShell onClick={() => yelpSearchApi('dragonfly')}>Steak</FavoriteSelectShell>
+                <FavoriteSelectShell onClick={() => yelpSearchApi('embers')}>Steak</FavoriteSelectShell>
                 {/* display error message if one of the button requests to yelp doesn't work out */}
                 { errMessage ? 
                     <p>{errMessage}</p> 

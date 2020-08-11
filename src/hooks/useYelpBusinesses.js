@@ -8,7 +8,7 @@ export default () => {
 
 
     const yelpSearchApi = async (searchTerm) => {
-        console.log('yelp search api reached');
+        console.log('yelp search function reached', searchTerm);
         
         try{
             const response = await yelp.get('/search',{

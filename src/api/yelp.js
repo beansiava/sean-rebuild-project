@@ -1,11 +1,13 @@
 import axios from 'axios';
 
 //if major error it is likely because i am authorizing more than one app with the same key. 
+//https://api.yelp.com/v3/businesses/{id}
+//Fixed cors issue by adding a proxy
 export default axios.create({
-    //https://api.yelp.com/v3/businesses/{id}
-    baseURL: 'https://api.yelp.com/v3/businesses',
+    baseURL: 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses',
     headers: {
-        Authorization:
-            'Bearer apHCg3_x-6_NzY1NOQSJyQURtBwc40I4mlAZxgkdQoVIL_8ncbexIlFL1Jhoi74ShiaiJE413-yXOzDZKyJfsJsxXWK-xKdqSXp67pL0zREvCfFLiZVfbcWcFc0iX3Yx'
+        "Access-Control-Allow-Origin": "http://localhost:3000",
+        Authorization: 'Bearer Zk-u960qzR6df9BF5SFq03hWj8XYvOGHBCxdcQUTYaQ0pHjNrlBG3kywtVgHrNVCexnHk8kb3fxIPGoy64afQorGttipkNVTbwQRIX2128HRT0ay2dMK98xdB38yX3Yx',
+        
     }
 })
